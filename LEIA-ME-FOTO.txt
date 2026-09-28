@@ -1,0 +1,1 @@
+IMPORTANTE: mantenha/copiei seu arquivo m1.jpg na raiz deste projeto. O HTML já está configurado para usar essa foto. As duas alterações solicitadas são: luz suave no cursor e troca do projeto automotivo pelo Conversor de Moedas.

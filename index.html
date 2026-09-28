@@ -1,126 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio | Izaquiel</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <style>
-        /* Zoom suave nas imagens */
-        .projetos-imagem {
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-        .projetos-imagem:hover {
-            transform: scale(1.05);
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Izaquiel Santos | Portfólio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div id="cursor-light"></div>
+  <header class="nav">
+    <a class="logo" href="#inicio">IS.</a>
+    <button class="menu" aria-label="Abrir menu">•••</button>
+    <nav>
+      <a href="#sobre">Sobre mim</a>
+      <a href="#skills">Conhecimentos técnicos</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-    <div class="particulas"></div>
-
-    <header>
-        <nav class="navegacao">
-            <ul class="menu">
-                <li><a href="#inicio" class="menu-link">Início</a></li>
-                <li><a href="#sobre-mim" class="menu-link">Sobre mim</a></li>
-                <li><a href="#projetos" class="menu-link">Projetos</a></li>
-                <li><a href="#contatos" class="menu-link">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main id="inicio" class="cabecalho">
-        <img src="m1.jpg" alt="Foto de perfil" class="foto-perfil">
-        <h1 class="sub-titulo glitch" data-tet="Izaquiel Costas dos Santos">Izaquiel Costas dos Santos</h1>
-        <p>Estudante de Engenharia de Software | Em busca de Estágio</p>
-    </main>
-
-    <section id="sobre-mim" class="sobre animar">
-        <h2>Sobre mim</h2>
-        <section id="habilidades" class="habilidades animar">
-            <h2>Habilidades Técnicas</h2>
-            <div class="habilidades-caixa">
-                <div class="habilidade-item"><i class="devicon-java-plain colored"></i><p>Java</p></div>
-                <div class="habilidade-item"><i class="devicon-python-plain colored"></i><p>Python</p></div>
-                <div class="habilidade-item"><i class="devicon-html5-plain colored"></i><p>HTML</p></div>
-                <div class="habilidade-item"><i class="devicon-css3-plain colored"></i><p>CSS</p></div>
-                <div class="habilidade-item"><i class="devicon-javascript-plain colored"></i><p>JavaScript</p></div>
-            </div>
-        </section>
-    </section>
-
-    <div class="sobre-caixa">
-        <p class="sobre-paragrafo animar">
-           Eu sou Estudante de Engenharia de Software com foco em desenvolvimento e aprimoramento contínuo.
-            Possuo conhecimentos em Java, Python, HTML, CSS e JavaScript,
-            e estou explorando diferentes áreas da tecnologia para definir minha especialização.
-            Busco uma oportunidade de estágio que me permita aplicar meus conhecimentos,
-            ganhar experiência prática e evoluir profissionalmente na área de tecnologia.
-        </p>
-    </div>
-
-    <section id="projetos" class="projetos animar">
-        <h2 class="projetos-titulo">Meus Projetos</h2>
-        <div class="projetos-caixa">
-            <div class="projeto-card animar">
-                <img src="445.png" alt="Projeto loja de carros" class="projetos-imagem" onclick="abrirImagem(this)">
-                <h3>Loja de Carros</h3>
-                <p>.Tela de login responsiva criada com HTML, CSS e JavaScript</p>
-            </div>
-            <div class="projeto-card animar">
-                <img src="mmm.png" alt="Projeto loja virtual" class="projetos-imagem" onclick="abrirImagem(this)">
-                <h3>Pensado...</h3>
-                <p>fazendo mas trabalhos.</p>
-            </div>
-            <div class="projeto-card animar">
-                <img src="mmm.png" alt="Projeto landing page" class="projetos-imagem" onclick="abrirImagem(this)">
-                <h3>Pensado...</h3>
-                <p>fazendo mas trabalhos</p>
-            </div>
+  <main>
+    <section id="inicio" class="hero reveal">
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="eyebrow">PORTFÓLIO</p>
+          <h1>Olá, eu sou<br><span>Izaquiel Santos.</span></h1>
+          <p class="lead">Desenvolvedor em evolução, transformando aprendizado em projetos reais.</p>
+          <div class="actions"><a class="btn primary" href="#projetos">Ver projetos</a><a class="btn" href="#contato">Contato</a></div>
         </div>
+        <div class="photo-wrap"><img src="m1.jpg" alt="Foto de Izaquiel Santos"></div>
+      </div>
     </section>
 
-    <section id="contatos" class="contatos animar">
-        <h2>Meus Contatos</h2>
-        <div class="redes-sociais">
-            <a href="https:github.com/Izaquielsantos" target="_blank" class="icone-contato"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/izaquiel-costa-dos-santos-171201247" target="_blank" class="icone-contato"><i class="fab fa-linkedin"></i></a>
-            <a href="https://wa.me/" target="_blank" class="icone-contato"><i class="fab fa-whatsapp"></i></a>
-        </div>
-
-        <form class="formulario-contato" id="formulario">
-            <input type="text" id="nome" placeholder="Seu nome" class="campo-form" required>
-            <textarea id="mensagem" placeholder="Digite sua mensagem" class="campo-form" required></textarea>
-            <button type="submit" class="botao-form">Enviar WhatsApp</button>
-        </form>
+    <section id="sobre" class="reveal">
+      <p class="eyebrow">SOBRE MIM</p>
+      <h2>Foco em aprender construindo.</h2>
+      <p class="copy">Sou Izaquiel Santos, apaixonado por tecnologia e desenvolvimento. Estou sempre buscando evoluir, aprender novas ferramentas e transformar ideias em projetos funcionais e bem construídos.</p>
     </section>
 
-    <footer>
-        <p>© 2026 - Izaquiel | Engenharia de Software </p>
-    </footer>
+    <section id="skills" class="reveal">
+      <p class="eyebrow">CONHECIMENTOS TÉCNICOS</p>
+      <h2>Tecnologias e ferramentas.</h2>
+      <div class="skills">
+        <div>HTML5</div><div>CSS3</div><div>JavaScript</div><div>Git</div><div>GitHub</div><div>VS Code</div>
+      </div>
+    </section>
 
-    <!-- Modal para ampliar imagens -->
-    <div id="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
-    background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;">
-        <img id="modal-img" style="max-width:90%; max-height:90%; border-radius:10px;">
-    </div>
+    <section id="projetos" class="reveal">
+      <p class="eyebrow">PROJETOS SELECIONADOS</p>
+      <h2>Projetos para explorar.</h2>
+      <div class="projects">
+        <article class="card"><span>01</span><h3>Calculadora</h3><p>Calculadora responsiva criada com HTML, CSS e JavaScript.</p><a href="calculadora/index.html">Abrir projeto →</a></article>
+        <article class="card"><span>02</span><h3>Gerenciador de Tarefas</h3><p>Lista de tarefas com conclusão, exclusão e armazenamento local.</p><a href="tarefas/index.html">Abrir projeto →</a></article>
+        <article class="card"><span>03</span><h3>Conversor de Moedas</h3><p>Conversor demonstrativo entre real, dólar e euro.</p><a href="moedas/index.html">Abrir projeto →</a></article>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
-    <script>
-        function abrirImagem(img) {
-            document.getElementById("modal").style.display = "flex";
-            document.getElementById("modal-img").src = img.src;
-        }
-        document.getElementById("modal").onclick = function() {
-            this.style.display = "none";
-        }
-    </script>
+    <section id="contato" class="contact reveal">
+      <p class="eyebrow">CONTATO</p><h2>Vamos conversar?</h2>
+      <div class="actions contact-actions">
+        <a class="btn primary" target="_blank" rel="noopener" href="https://wa.me/5582996830631?text=Ol%C3%A1%2C%20Izaquiel%21%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar.">WhatsApp</a>
+        <a class="btn" target="_blank" rel="noopener" href="https://github.com/Izaquielsantos">GitHub</a>
+        <a class="btn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/izaquiel-costa-dos-santos-171201247/">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
-
